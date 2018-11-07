@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
     <!-- 开启驼峰匹配 -->
     <settings>
@@ -9,7 +10,7 @@
     <!-- 别名 -->
     <typeAliases>
         <!--默认别名为：javabean 的首字母小写的非限定类名来作为它的别名-->
-        <package name="com.entity" />
+        <package name="wang.dreamland.www.entity" />
     </typeAliases>
     <plugins>
         <plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
@@ -22,8 +23,9 @@
             <!--通用Mapper接口，多个通用接口用逗号隔开-->
             <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
         </plugin>
-        <!-- 自定义分页插件 -->
-        <!--   <plugin interceptor="wang.dreamland.www.common.PageHelper"></plugin>-->
+            <!-- 自定义分页插件 -->
+            <plugin interceptor="wang.dreamland.www.common.PageHelper"></plugin>
 
     </plugins>
 </configuration>
+
